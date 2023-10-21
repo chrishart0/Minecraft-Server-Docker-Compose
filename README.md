@@ -28,12 +28,21 @@ This repository contains a Docker Compose setup for running a Minecraft server. 
     nano .env
     ```
 
-3. **Start the Server**:
+3. **Run the setup script**:
+    
+    This will agree to the eula
+
+    ```bash
+    ./setup.sh
+    ```
+
+
+4. **Start the Server**:
 
     Use Docker Compose to start the server:
 
     ```bash
-    docker-compose up -d
+    docker-compose up
     ```
 
 ## Usage
