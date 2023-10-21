@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  minecraft:
+    image: minecraft-server:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - EULA=true
+      - MIN_RAM=1G
+      - MAX_RAM=4G
+      - MINECRAFT_VERSION=1.17.1
+    ports:
+      - "25565:25565"
+    volumes:
+      - root-dir:/app
+
+volumes:
+  minecraft:
+      driver: local
+      driver_opts:
+        type: none
+        o: bind
+        device: ./minecraft
+  root-dir:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./
+
+
