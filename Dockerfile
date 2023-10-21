@@ -1,5 +1,5 @@
 # Use an official OpenJDK runtime as the base image
-FROM openjdk:16-jdk-slim
+FROM openjdk:21-jdk-slim
 
 
 # Working directory inside the container

@@ -10,7 +10,7 @@ services:
       - EULA=true
       - MIN_RAM=1G
       - MAX_RAM=4G
-      - MINECRAFT_VERSION=1.17.1
+      - MINECRAFT_VERSION=1.20.2
     ports:
       - "25565:25565"
     volumes:

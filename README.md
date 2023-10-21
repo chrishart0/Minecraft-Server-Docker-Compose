@@ -84,16 +84,14 @@ Note: Ensure to regularly update your server and plugins to the latest versions 
 - **.env.example**
   - *Description*: This is a template environment file. Users should copy this file to `.env` and modify it with specific values like `MINECRAFT_VERSION`, memory allocations, and other essential settings.
 
-- **server-data/**
+- **minecraft/**
   - *Description*: A dedicated directory housing Minecraft server files. This ensures configurations, world data, logs, and other essential files persist outside the container, making upgrades and backups more straightforward.
 
 ### Utility Scripts
 
-- **scripts/**
-  - **backup.sh**
-    - *Description*: A shell script that compresses and saves crucial game data, ensuring you have periodic backups of the world, configurations, and other vital server files.
-  - **start.sh**, **stop.sh**, **restart.sh**
-    - *Description*: These are utility shell scripts to simplify Docker Compose commands, providing a straightforward method for starting, stopping, or restarting the Minecraft server container.
+- **backup.sh**
+- *Description*: A shell script that compresses and saves crucial game data, ensuring you have periodic backups of the world, configurations, and other vital server files.
+
 
 ### Automated Testing
 
@@ -111,16 +109,13 @@ Note: Ensure to regularly update your server and plugins to the latest versions 
 - **LICENSE**
   - *Description*: This file clearly defines the licensing terms, ensuring users and contributors understand their rights and responsibilities when using or modifying the repository's content.
 
-### Add-ons & Extensions
+### Add-ons & Extensions (ToDo: Not completed yet)
 
 - **plugins/** (if applicable)
   - *Description*: If you're using a server type like Spigot or Paper, this directory will store the plugins you wish to add. It makes managing and updating plugins easier, with a clear separation from core server files.
 
 - **mods/** (if applicable)
   - *Description*: For modded servers (like Forge or Fabric), this directory will contain all the server mods. It ensures an organized structure and simplifies mod management.
-
-- **database/** (if required)
-  - *Description*: If your server setup or any plugins/mods require a database, this section could include initialization scripts, database configurations, or even Docker Compose service definitions for database containers.
 
 - **monitoring/** (optional)
   - *Description*: For advanced users who wish to monitor server performance, this directory can hold configurations and integrations for tools like Prometheus, Grafana, or others, providing insights into server health and performance.
