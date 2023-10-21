@@ -3,10 +3,7 @@ name: Minecraft Server Setup Test
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - master
 
 jobs:
   test-setup:
